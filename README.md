@@ -1,73 +1,184 @@
-# Welcome to your Lovable project
+# Developer Portfolio - Soham Mishra
 
-## Project info
+A modern, code-themed personal portfolio built with React, TypeScript, and Tailwind CSS.
 
-**URL**: https://lovable.dev/projects/1fdfc5d3-d65f-4b38-b481-9cb098fddb28
+## 🎨 Design Features
 
-## How can I edit this code?
+- Dark theme with neon green accents
+- Code-themed design elements
+- Smooth scroll animations
+- Responsive layout
+- Interactive project cards
+- Mac-style code windows
+- Typing animation effects
 
-There are several ways of editing your application.
+## 🚀 Quick Edit Guide
 
-**Use Lovable**
+### Personalizing Your Portfolio
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/1fdfc5d3-d65f-4b38-b481-9cb098fddb28) and start prompting.
+#### 1. Update Personal Information
 
-Changes made via Lovable will be committed automatically to this repo.
+**Header & Hero Section** (`src/components/Hero.tsx` and `src/components/Header.tsx`):
+- Replace "Soham Mishra" with your name
+- Update the subtitle text
+- Modify the bio description
+- Change social media links (LinkedIn, GitHub)
 
-**Use your preferred IDE**
+#### 2. Update About Section (`src/components/About.tsx`):
+- Edit the bio paragraphs
+- Add your photo at `src/assets/developer.jpg`
+- Update the polaroid caption
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+#### 3. Add Your Projects (`src/components/Projects.tsx`):
+```typescript
+const projects = [
+  {
+    id: 1,
+    title: "Your Project Title",
+    description: "Project description...",
+    date: "Month Year - Present",
+    gradient: "from-blue-500 to-cyan-400", // Choose gradient colors
+    tags: ["Tech1", "Tech2", "Tech3"],
+    link: "project-url"
+  },
+  // Add more projects...
+];
 ```
 
-**Edit a file directly in GitHub**
+#### 4. Update Skills (`src/components/Skills.tsx`):
+```typescript
+const skills = {
+  languages: ["Your", "Languages"],
+  frameworks: ["Your", "Frameworks"],
+  tools: ["Your", "Tools"],
+  databases: ["Your", "Databases"],
+  practices: ["Your", "Practices"]
+};
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+#### 5. Add Experience (`src/components/Experience.tsx`):
+```typescript
+const experiences = [
+  {
+    id: 1,
+    title: "Job Title",
+    company: "Company Name",
+    period: "Start - End",
+    description: "Role description",
+    achievements: ["Achievement 1", "Achievement 2"]
+  },
+  // Add more experiences...
+];
+```
 
-**Use GitHub Codespaces**
+#### 6. Update Contact Information (`src/components/Contact.tsx`):
+- Email address
+- Phone number
+- Location
+- Add form submission logic (integrate with backend/service)
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Design Customization
 
-## What technologies are used for this project?
+#### Change Color Scheme (`src/index.css`):
+```css
+:root {
+  --primary: 142 76% 56%;  /* Green accent color */
+  --background: 220 26% 7%; /* Dark background */
+  /* Modify other colors as needed */
+}
+```
 
-This project is built with:
+#### Change Fonts (`index.html`):
+Currently using:
+- JetBrains Mono (monospace)
+- Inter (sans-serif)
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+To change, update the Google Fonts link and CSS variables.
 
-## How can I deploy this project?
+### Adding Images
 
-Simply open [Lovable](https://lovable.dev/projects/1fdfc5d3-d65f-4b38-b481-9cb098fddb28) and click on Share -> Publish.
+1. **Your Photo**:
+   - Add to: `src/assets/developer.jpg`
+   - Import in `About.tsx`
 
-## Can I connect a custom domain to my Lovable project?
+2. **Project Images** (optional):
+   - Create: `src/assets/projects/`
+   - Add images and import in `Projects.tsx`
 
-Yes, you can!
+## 📦 Installation & Development
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+```bash
+# Install dependencies
+npm install
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+## 🚀 Deployment
+
+### Deploy to GitHub Pages
+
+1. Update `vite.config.ts`:
+```typescript
+export default defineConfig({
+  base: '/your-repo-name/',
+  // ...
+})
+```
+
+2. Build and deploy:
+```bash
+npm run build
+# Push dist folder to gh-pages branch
+```
+
+### Deploy to Netlify
+
+1. Connect your GitHub repository
+2. Build command: `npm run build`
+3. Publish directory: `dist`
+4. Deploy!
+
+### Deploy to Vercel
+
+1. Import your GitHub repository
+2. Framework: Vite
+3. Deploy!
+
+## 📝 SEO Optimization
+
+Update in `index.html`:
+- Title tag
+- Meta description
+- Open Graph tags
+- Twitter card tags
+
+## 🛠️ Tech Stack
+
+- **Framework**: React 18
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui
+- **Icons**: Lucide React
+- **Build Tool**: Vite
+- **Routing**: React Router
+
+## 📄 License
+
+Feel free to use this template for your personal portfolio!
+
+## 🤝 Contributing
+
+This is a personal portfolio template. Feel free to fork and customize for your own use!
+
+## 📧 Contact
+
+For questions about this template, please refer to the code comments and documentation.
+
+---
+
+**Note**: Remember to replace all placeholder content with your actual information before deploying!
