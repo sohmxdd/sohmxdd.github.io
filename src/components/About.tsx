@@ -1,3 +1,5 @@
+import developerImage from "@/assets/developer.jpg";
+
 const About = () => {
   return (
     <section id="about" className="py-24 relative overflow-hidden">
@@ -15,26 +17,18 @@ const About = () => {
             
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                I'm a passionate developer with a keen interest in creating innovative solutions 
-                that make a real-world impact. My journey in tech has been driven by curiosity 
-                and a desire to push boundaries.
+                Hey, I'm Soham — a developer who loves mixing engineering and creativity.
+                I build machine learning tools, cinematic interfaces, and aesthetic user experiences.
               </p>
               
               <p>
-                With experience spanning from AI and machine learning to full-stack development, 
-                I enjoy tackling complex challenges and transforming ideas into elegant, 
-                functional applications.
+                Currently working on SPIRAL — my personal AI assistant — and exploring advanced ML concepts.
+                I enjoy experimenting with Python, React, Blender, and Arduino to bring ideas to life.
               </p>
               
               <p>
-                When I'm not coding, you'll find me exploring new technologies, contributing to 
-                open-source projects, or sharing knowledge with the developer community.
-              </p>
-              
-              <p>
-                I believe in continuous learning and staying at the forefront of technological 
-                innovation. My goal is to create solutions that not only solve problems but also 
-                inspire others in the tech community.
+                When I'm not coding, you'll find me creating cinematic content, learning new algorithms,
+                or building gesture-controlled interfaces. Always exploring the intersection of technology and art.
               </p>
             </div>
           </div>
@@ -56,13 +50,13 @@ const About = () => {
               {/* Polaroid-style image container */}
               <div className="p-8 relative">
                 <div className="bg-white p-4 shadow-2xl transform hover:rotate-2 hover:scale-105 transition-all duration-300 cursor-pointer relative group">
-                  {/* Placeholder image - EDIT THIS */}
-                  <div className="aspect-square bg-gradient-to-br from-primary/20 via-accent/20 to-secondary/40 flex items-center justify-center text-muted-foreground">
-                    <div className="text-center space-y-2">
-                      <p className="text-sm font-mono">Replace with</p>
-                      <p className="text-sm font-mono">your photo</p>
-                      <p className="text-xs opacity-60">src/assets/developer.jpg</p>
-                    </div>
+                  {/* Developer image */}
+                  <div className="aspect-square overflow-hidden">
+                    <img 
+                      src={developerImage} 
+                      alt="Soham Mishra" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   
                   {/* Polaroid caption */}

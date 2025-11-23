@@ -4,7 +4,7 @@ import { Linkedin, Github, ChevronDown } from "lucide-react";
 
 const Hero = () => {
   const [typedText, setTypedText] = useState("");
-  const fullText = "Innovator, Creator & Strategist";
+  const fullText = "AI/ML Developer • Filmmaker • Innovator";
   
   useEffect(() => {
     let index = 0;
@@ -65,9 +65,9 @@ const Hero = () => {
             className="text-lg text-muted-foreground max-w-2xl mb-12 leading-relaxed animate-fade-in-up"
             style={{ animationDelay: "0.4s", opacity: 0 }}
           >
-            I'm a passionate developer focused on building innovative tech solutions. 
-            From AI projects to cutting-edge applications, I love turning ideas into reality.
-            Currently exploring new technologies and contributing to impactful projects.
+            Hey, I'm Soham — a developer who loves mixing engineering and creativity.
+            I build machine learning tools, cinematic interfaces, and aesthetic user experiences.
+            Currently working on SPIRAL — my personal AI assistant — and exploring advanced ML concepts.
           </p>
           
           {/* CTA Buttons */}
@@ -98,7 +98,7 @@ const Hero = () => {
             style={{ animationDelay: "0.6s", opacity: 0 }}
           >
             <a 
-              href="https://linkedin.com/in/your-username" 
+              href="https://www.linkedin.com/in/soham-mishra-58434a281/" 
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-secondary hover:bg-secondary/80 rounded-lg transition-all hover:-translate-y-1"
@@ -107,7 +107,7 @@ const Hero = () => {
               <Linkedin className="h-6 w-6" />
             </a>
             <a 
-              href="https://github.com/your-username" 
+              href="https://github.com/sohmxdd" 
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-secondary hover:bg-secondary/80 rounded-lg transition-all hover:-translate-y-1"

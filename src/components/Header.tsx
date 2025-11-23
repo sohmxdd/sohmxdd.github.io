@@ -72,7 +72,7 @@ const Header = () => {
             onClick={() => scrollToSection("home")}
             className="text-lg font-mono code-accent hover:text-primary transition-colors"
           >
-            &lt; Soham Mishra / &gt;
+            &lt; Soham Mishra /&gt;
           </button>
 
           {/* Navigation */}

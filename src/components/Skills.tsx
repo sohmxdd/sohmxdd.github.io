@@ -1,16 +1,15 @@
 const Skills = () => {
-  // EDIT THIS: Customize your skills
   const skills = {
-    languages: ["JavaScript", "Python", "TypeScript", "Java"],
-    frameworks: ["React", "Node.js", "TensorFlow", "Django"],
-    tools: ["Git", "Docker", "AWS", "Firebase"],
-    databases: ["MongoDB", "PostgreSQL", "Redis"],
-    practices: ["Agile Development", "CI/CD", "Testing", "Code Review"]
+    languages: ["Python", "JavaScript", "TypeScript", "C++"],
+    frameworks: ["React", "TensorFlow", "Node.js", "Streamlit"],
+    tools: ["Git", "Arduino", "Blender", "D3.js"],
+    databases: ["MongoDB", "PostgreSQL"],
+    specializations: ["Machine Learning", "Data Visualization", "Cinematics", "NLP"]
   };
 
   const skillBadges = [
-    "React", "Python", "JavaScript", "TypeScript", "Node.js", 
-    "TensorFlow", "Docker", "Git", "AWS", "MongoDB"
+    "Python", "React", "Machine Learning", "Blender", "Arduino", 
+    "TensorFlow", "Git", "Data Visualization"
   ];
 
   return (
@@ -131,16 +130,16 @@ const Skills = () => {
                   <span className="text-foreground">],</span>
                 </div>
 
-                {/* Practices */}
+                {/* Specializations */}
                 <div className="ml-4">
-                  <span className="text-code-green">practices</span>
+                  <span className="text-code-green">specializations</span>
                   <span className="text-foreground">: [</span>
                 </div>
                 <div className="ml-8 flex flex-wrap gap-2">
-                  {skills.practices.map((practice, i) => (
-                    <span key={practice}>
-                      <span className="text-code-orange">'{practice}'</span>
-                      {i < skills.practices.length - 1 && <span className="text-foreground">,</span>}
+                  {skills.specializations.map((spec, i) => (
+                    <span key={spec}>
+                      <span className="text-code-orange">'{spec}'</span>
+                      {i < skills.specializations.length - 1 && <span className="text-foreground">,</span>}
                     </span>
                   ))}
                 </div>
