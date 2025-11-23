@@ -17,7 +17,7 @@ All colors MUST be HSL.
     --popover: 220 23% 10%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 142 76% 56%;
+    --primary: 210 100% 65%;
     --primary-foreground: 220 26% 7%;
 
     --secondary: 220 23% 14%;
@@ -26,7 +26,7 @@ All colors MUST be HSL.
     --muted: 220 23% 14%;
     --muted-foreground: 215 16% 65%;
 
-    --accent: 142 76% 56%;
+    --accent: 210 100% 65%;
     --accent-foreground: 220 26% 7%;
 
     --destructive: 0 84% 60%;
@@ -34,7 +34,7 @@ All colors MUST be HSL.
 
     --border: 220 23% 18%;
     --input: 220 23% 14%;
-    --ring: 142 76% 56%;
+    --ring: 210 100% 65%;
 
     --radius: 0.75rem;
     
@@ -74,6 +74,38 @@ All colors MUST be HSL.
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 220 26% 7%;
+
+    --card: 0 0% 98%;
+    --card-foreground: 220 26% 7%;
+
+    --popover: 0 0% 98%;
+    --popover-foreground: 220 26% 7%;
+
+    --primary: 0 0% 100%;
+    --primary-foreground: 220 26% 7%;
+
+    --secondary: 220 13% 91%;
+    --secondary-foreground: 220 26% 7%;
+
+    --muted: 220 13% 91%;
+    --muted-foreground: 220 23% 40%;
+
+    --accent: 0 0% 100%;
+    --accent-foreground: 220 26% 7%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 13% 85%;
+    --input: 220 13% 91%;
+    --ring: 0 0% 100%;
+
+    --radius: 0.75rem;
+  }
+
 }
 
 @layer base {
@@ -106,6 +138,15 @@ All colors MUST be HSL.
   
   .code-accent {
     @apply text-primary font-mono;
+  }
+  
+  .light .text-primary,
+  .light .text-accent,
+  .light .border-primary,
+  .light .bg-primary,
+  .light .text-gradient,
+  .light .code-accent {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 12px rgba(255, 255, 255, 0.4);
   }
   
   .hover-lift {

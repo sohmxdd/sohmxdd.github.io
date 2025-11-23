@@ -5,6 +5,15 @@ import { Moon, Sun } from "lucide-react";
 const Header = () => {
   const [activeSection, setActiveSection] = useState("home");
   const [scrolled, setScrolled] = useState(false);
+  const [theme, setTheme] = useState<"dark" | "light">("dark");
+
+  useEffect(() => {
+    // Initialize theme from localStorage or default to dark
+    const savedTheme = localStorage.getItem("theme") as "dark" | "light" | null;
+    const initialTheme = savedTheme || "dark";
+    setTheme(initialTheme);
+    document.documentElement.classList.toggle("light", initialTheme === "light");
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +35,13 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === "dark" ? "light" : "dark";
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
+    document.documentElement.classList.toggle("light", newTheme === "light");
+  };
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -77,9 +93,16 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Theme Toggle (placeholder - not functional in this version) */}
-          <button className="p-2 rounded-lg hover:bg-secondary transition-colors">
-            <Sun className="h-5 w-5 text-muted-foreground" />
+          {/* Theme Toggle */}
+          <button 
+            onClick={toggleTheme}
+            className="p-2 rounded-lg hover:bg-secondary transition-all duration-300"
+          >
+            {theme === "dark" ? (
+              <Sun className="h-5 w-5 text-muted-foreground transition-transform duration-300 hover:rotate-45" />
+            ) : (
+              <Moon className="h-5 w-5 text-muted-foreground transition-transform duration-300 hover:-rotate-12" />
+            )}
           </button>
         </div>
       </div>
