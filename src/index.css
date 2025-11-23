@@ -17,7 +17,7 @@ All colors MUST be HSL.
     --popover: 220 23% 10%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 100% 65%;
+    --primary: 142 76% 56%;
     --primary-foreground: 220 26% 7%;
 
     --secondary: 220 23% 14%;
@@ -34,7 +34,7 @@ All colors MUST be HSL.
 
     --border: 220 23% 18%;
     --input: 220 23% 14%;
-    --ring: 210 100% 65%;
+    --ring: 142 76% 56%;
 
     --radius: 0.75rem;
     
@@ -75,33 +75,33 @@ All colors MUST be HSL.
   }
 
   .light {
-    --background: 0 0% 100%;
-    --foreground: 220 26% 7%;
+    --background: 210 20% 96%;
+    --foreground: 215 25% 14%;
 
-    --card: 0 0% 98%;
-    --card-foreground: 220 26% 7%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 14%;
 
-    --popover: 0 0% 98%;
-    --popover-foreground: 220 26% 7%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 14%;
 
-    --primary: 0 0% 100%;
-    --primary-foreground: 220 26% 7%;
+    --primary: 152 48% 72%;
+    --primary-foreground: 215 25% 14%;
 
-    --secondary: 220 13% 91%;
-    --secondary-foreground: 220 26% 7%;
+    --secondary: 210 20% 92%;
+    --secondary-foreground: 215 25% 14%;
 
-    --muted: 220 13% 91%;
-    --muted-foreground: 220 23% 40%;
+    --muted: 210 20% 92%;
+    --muted-foreground: 215 12% 45%;
 
-    --accent: 0 0% 100%;
-    --accent-foreground: 220 26% 7%;
+    --accent: 194 67% 74%;
+    --accent-foreground: 215 25% 14%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 220 13% 85%;
-    --input: 220 13% 91%;
-    --ring: 0 0% 100%;
+    --border: 210 20% 88%;
+    --input: 210 20% 92%;
+    --ring: 152 48% 72%;
 
     --radius: 0.75rem;
   }
@@ -140,14 +140,6 @@ All colors MUST be HSL.
     @apply text-primary font-mono;
   }
   
-  .light .text-primary,
-  .light .text-accent,
-  .light .border-primary,
-  .light .bg-primary,
-  .light .text-gradient,
-  .light .code-accent {
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 12px rgba(255, 255, 255, 0.4);
-  }
   
   .hover-lift {
     @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;

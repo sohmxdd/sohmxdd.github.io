@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -14,18 +14,43 @@ const Contact = () => {
     message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // EDIT THIS: Add your form submission logic here
-    console.log("Form submitted:", formData);
-    
-    toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
-    
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    try {
+      const response = await fetch("https://formspree.io/f/xanyedbb", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Message sent!",
+          description: "Thanks for reaching out. I'll get back to you soon.",
+        });
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        toast({
+          title: "Error",
+          description: "Something went wrong. Please try again.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -59,29 +84,15 @@ const Contact = () => {
               <h3 className="text-2xl font-bold mb-6">Get in Touch</h3>
               
               <div className="space-y-4">
-                {/* EDIT THIS: Update with your contact information */}
                 <div className="flex items-start gap-4 p-4 bg-card border border-border rounded-lg hover:border-primary transition-colors">
                   <Mail className="h-5 w-5 text-primary mt-1" />
                   <div>
                     <p className="font-medium mb-1">Email</p>
                     <a 
-                      href="mailto:email@example.com" 
+                      href="mailto:soham.mishra206@gmail.com" 
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      email@example.com
-                    </a>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-4 p-4 bg-card border border-border rounded-lg hover:border-primary transition-colors">
-                  <Phone className="h-5 w-5 text-primary mt-1" />
-                  <div>
-                    <p className="font-medium mb-1">Phone</p>
-                    <a 
-                      href="tel:+000000000000" 
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      +00 000 000 0000
+                      soham.mishra206@gmail.com
                     </a>
                   </div>
                 </div>
@@ -91,7 +102,7 @@ const Contact = () => {
                   <div>
                     <p className="font-medium mb-1">Location</p>
                     <p className="text-muted-foreground">
-                      Your City, Country
+                      Delhi NCR, India
                     </p>
                   </div>
                 </div>
