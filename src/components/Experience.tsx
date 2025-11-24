@@ -7,7 +7,7 @@ const experiences = [
     description: "",
     achievements: [
       "Actively working on ML concepts, algorithm visualization, and software development",
-      "Leading university communities including the Stargazers Club and IEEE Student Branch",
+      "Leading university communities, including the Stargazers Club and DSA Student Committee",
       "Balancing academics with personal AI/ML and software projects"
     ]
   },
