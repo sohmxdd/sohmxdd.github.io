@@ -31,47 +31,9 @@ const About = () => {
                 or building gesture-controlled interfaces. Always exploring the intersection of technology and art.
               </p>
             </div>
-          </div>
-          
-          {/* Right column - Code window with polaroid */}
-          <div className="relative space-y-6">
-            {/* Mac-style code window with polaroid */}
-            <div className="bg-card border border-border rounded-xl overflow-hidden shadow-xl">
-              {/* Window header */}
-              <div className="bg-secondary px-4 py-3 flex items-center gap-2 border-b border-border">
-                <div className="flex gap-2">
-                  <div className="w-3 h-3 rounded-full bg-destructive hover:brightness-110 transition-all cursor-pointer" />
-                  <div className="w-3 h-3 rounded-full bg-code-yellow hover:brightness-110 transition-all cursor-pointer" />
-                  <div className="w-3 h-3 rounded-full bg-primary hover:brightness-110 transition-all cursor-pointer" />
-                </div>
-                <span className="text-xs text-muted-foreground font-mono ml-2">developer.jpg</span>
-              </div>
-              
-              {/* Polaroid-style image container */}
-              <div className="p-8 relative">
-                <div className="bg-white p-4 shadow-2xl transform hover:rotate-2 hover:scale-105 transition-all duration-300 cursor-pointer relative group">
-                  {/* Developer image */}
-                  <div className="aspect-square overflow-hidden">
-                    <img 
-                      src={developerImage} 
-                      alt="Soham Mishra" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  
-                  {/* Polaroid caption */}
-                  <p className="text-center mt-3 font-mono text-sm text-gray-800">
-                    &lt;Developer/&gt;
-                  </p>
-                  
-                  {/* Green corner accent */}
-                  <div className="absolute -top-2 -right-2 w-12 h-12 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-                </div>
-              </div>
-            </div>
 
-            {/* Code snippet window */}
-            <div className="bg-card border border-border rounded-xl overflow-hidden shadow-xl">
+            {/* Code snippet window beneath text */}
+            <div className="bg-card border border-border rounded-xl overflow-hidden shadow-xl mt-8">
               {/* Window header */}
               <div className="bg-secondary px-4 py-3 flex items-center gap-2 border-b border-border">
                 <div className="flex gap-2">
@@ -114,6 +76,44 @@ const About = () => {
                     <span className="text-primary">"Creating at the intersection of code and art."</span>
                     <span className="text-muted-foreground">);</span>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Right column - Photo only */}
+          <div className="relative">
+            {/* Mac-style code window with polaroid */}
+            <div className="bg-card border border-border rounded-xl overflow-hidden shadow-xl">
+              {/* Window header */}
+              <div className="bg-secondary px-4 py-3 flex items-center gap-2 border-b border-border">
+                <div className="flex gap-2">
+                  <div className="w-3 h-3 rounded-full bg-destructive hover:brightness-110 transition-all cursor-pointer" />
+                  <div className="w-3 h-3 rounded-full bg-code-yellow hover:brightness-110 transition-all cursor-pointer" />
+                  <div className="w-3 h-3 rounded-full bg-primary hover:brightness-110 transition-all cursor-pointer" />
+                </div>
+                <span className="text-xs text-muted-foreground font-mono ml-2">developer.jpg</span>
+              </div>
+              
+              {/* Polaroid-style image container */}
+              <div className="p-8 relative">
+                <div className="bg-white p-4 shadow-2xl transform hover:rotate-2 hover:scale-105 transition-all duration-300 cursor-pointer relative group">
+                  {/* Developer image */}
+                  <div className="aspect-square overflow-hidden">
+                    <img 
+                      src={developerImage} 
+                      alt="Soham Mishra" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  
+                  {/* Polaroid caption */}
+                  <p className="text-center mt-3 font-mono text-sm text-gray-800">
+                    &lt;Developer/&gt;
+                  </p>
+                  
+                  {/* Green corner accent */}
+                  <div className="absolute -top-2 -right-2 w-12 h-12 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
               </div>
             </div>
