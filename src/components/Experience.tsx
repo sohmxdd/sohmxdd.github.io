@@ -1,39 +1,44 @@
-// EDIT THIS: Add your own experience entries
 const experiences = [
   {
     id: 1,
-    title: "Software Engineer Intern",
-    company: "Tech Company",
-    period: "June 2024 - Present",
-    description: "Developing innovative solutions and contributing to cutting-edge projects.",
+    title: "Undergraduate B.Tech CSE Student",
+    company: "DBS Global University",
+    period: "August 2024 - Present",
+    description: "",
     achievements: [
-      "Built scalable applications using modern tech stack",
-      "Collaborated with cross-functional teams",
-      "Improved system performance by 40%"
+      "Actively working on ML concepts, algorithm visualization, and software development",
+      "Leading university communities including the Stargazers Club and IEEE Student Branch",
+      "Balancing academics with personal AI/ML and software projects"
     ]
   },
   {
     id: 2,
-    title: "Research Assistant",
-    company: "University Research Lab",
-    period: "January 2024 - May 2024",
-    description: "Conducted research in artificial intelligence and machine learning.",
-    achievements: [
-      "Published research findings",
-      "Developed novel algorithms",
-      "Presented at conferences"
-    ]
+    title: "Hackathon Finalist (Two-Time)",
+    company: "Tula's University Hackathon",
+    period: "September 2025",
+    description: "",
+    achievements: []
   },
   {
     id: 3,
-    title: "Technical Consultant",
-    company: "Freelance",
-    period: "September 2023 - December 2023",
-    description: "Provided technical consultation for various client projects.",
+    title: "Hackathon Developer – IoT + Blockchain Project",
+    company: "DIT University Hackathon",
+    period: "November 2024",
+    description: "",
+    achievements: []
+  },
+  {
+    id: 4,
+    title: "Founder – Node (Community of Builders & Innovators)",
+    company: "Node (Independent Community Project)",
+    period: "2024 - Present",
+    description: "",
     achievements: [
-      "Delivered 10+ successful projects",
-      "Mentored junior developers",
-      "Implemented best practices"
+      "Founded Node as a student-led tech community for builders and innovators",
+      "Developing structure across AI/ML, Robotics, Software, Content, and Research teams",
+      "Leading branding, community operations, project pipelines, and events",
+      "Guiding learners through collaborative projects, workshops, and technical sessions",
+      "Actively expanding membership and long-term development strategy"
     ]
   }
 ];
@@ -81,18 +86,22 @@ const Experience = () => {
                       <p className="text-sm text-muted-foreground mt-1">{exp.period}</p>
                     </div>
                     
-                    <p className="text-muted-foreground mb-4">
-                      {exp.description}
-                    </p>
+                    {exp.description && (
+                      <p className="text-muted-foreground mb-4">
+                        {exp.description}
+                      </p>
+                    )}
                     
-                    <ul className={`space-y-2 text-sm ${index % 2 === 0 ? "md:text-right" : ""}`}>
-                      {exp.achievements.map((achievement, i) => (
-                        <li key={i} className="text-muted-foreground flex items-start gap-2">
-                          <span className="text-primary mt-1">▹</span>
-                          <span>{achievement}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    {exp.achievements.length > 0 && (
+                      <ul className={`space-y-2 text-sm ${index % 2 === 0 ? "md:text-right" : ""}`}>
+                        {exp.achievements.map((achievement, i) => (
+                          <li key={i} className="text-muted-foreground flex items-start gap-2">
+                            <span className="text-primary mt-1">▹</span>
+                            <span>{achievement}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
                 </div>
 

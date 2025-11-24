@@ -34,8 +34,8 @@ const About = () => {
           </div>
           
           {/* Right column - Code window with polaroid */}
-          <div className="relative">
-            {/* Mac-style code window */}
+          <div className="relative space-y-6">
+            {/* Mac-style code window with polaroid */}
             <div className="bg-card border border-border rounded-xl overflow-hidden shadow-xl">
               {/* Window header */}
               <div className="bg-secondary px-4 py-3 flex items-center gap-2 border-b border-border">
@@ -66,6 +66,54 @@ const About = () => {
                   
                   {/* Green corner accent */}
                   <div className="absolute -top-2 -right-2 w-12 h-12 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
+                </div>
+              </div>
+            </div>
+
+            {/* Code snippet window */}
+            <div className="bg-card border border-border rounded-xl overflow-hidden shadow-xl">
+              {/* Window header */}
+              <div className="bg-secondary px-4 py-3 flex items-center gap-2 border-b border-border">
+                <div className="flex gap-2">
+                  <div className="w-3 h-3 rounded-full bg-destructive hover:brightness-110 transition-all cursor-pointer" />
+                  <div className="w-3 h-3 rounded-full bg-code-yellow hover:brightness-110 transition-all cursor-pointer" />
+                  <div className="w-3 h-3 rounded-full bg-primary hover:brightness-110 transition-all cursor-pointer" />
+                </div>
+                <span className="text-xs text-muted-foreground font-mono ml-2">developer.js</span>
+              </div>
+              
+              {/* Code content */}
+              <div className="p-6 font-mono text-sm bg-card">
+                <div className="space-y-2">
+                  <div>
+                    <span className="text-accent">const</span>{" "}
+                    <span className="text-foreground">developer</span>{" "}
+                    <span className="text-muted-foreground">=</span>{" "}
+                    <span className="text-primary">"Soham Mishra"</span>
+                    <span className="text-muted-foreground">;</span>
+                  </div>
+                  <div>
+                    <span className="text-accent">const</span>{" "}
+                    <span className="text-foreground">building</span>{" "}
+                    <span className="text-muted-foreground">=</span>{" "}
+                    <span className="text-primary">"AI Tools + Cinematic Interfaces"</span>
+                    <span className="text-muted-foreground">;</span>
+                  </div>
+                  <div>
+                    <span className="text-accent">const</span>{" "}
+                    <span className="text-foreground">currentlyWorkingOn</span>{" "}
+                    <span className="text-muted-foreground">=</span>{" "}
+                    <span className="text-primary">"SPIRAL — Personal AI Assistant"</span>
+                    <span className="text-muted-foreground">;</span>
+                  </div>
+                  <div className="pt-2">
+                    <span className="text-foreground">console</span>
+                    <span className="text-muted-foreground">.</span>
+                    <span className="text-accent">log</span>
+                    <span className="text-muted-foreground">(</span>
+                    <span className="text-primary">"Creating at the intersection of code and art."</span>
+                    <span className="text-muted-foreground">);</span>
+                  </div>
                 </div>
               </div>
             </div>
